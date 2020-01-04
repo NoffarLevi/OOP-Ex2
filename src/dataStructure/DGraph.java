@@ -71,9 +71,10 @@ public class DGraph implements graph, Serializable{
 	public void connect(int src, int dest, double w) {
 		if(!(mapNode.containsKey(src)) )
 		{throw new RuntimeException("Src does not exist");}
+		if(src==dest) {
+			throw new RuntimeException("Can't add e vertex to itself");}
 		if(!(mapNode.containsKey(dest)))
 		{throw new RuntimeException("Dest does not exist");}
-
 		if(this.getEdge(src, dest)!= null) {
 			mapEdge.get(src).remove(dest);	
 			numofEdges--;
@@ -87,7 +88,7 @@ public class DGraph implements graph, Serializable{
 			mapEdge.put(src,map);
 			numofEdges++;
 			MC++;
-		}
+		} 
 		else {
 			edge_data edge = new Edge(mapNode.get(src),mapNode.get(dest),w);
 			mapEdge.get(src).put(dest, edge);

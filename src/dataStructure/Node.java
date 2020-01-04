@@ -22,7 +22,7 @@ public class Node implements node_data,Serializable{
 	public Node(int key){
 		this.key=key;
 		double x=((Math.random()*1000)/1.5);
-		double y=(((Math.random()*1000)/1.5)+50);
+		double y=(((Math.random()*1000)/1.5)+100);
 		Point3D point3d=new Point3D(x, y);
 		this.location=point3d;
 		this.weight=Double.POSITIVE_INFINITY;

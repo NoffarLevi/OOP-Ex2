@@ -608,15 +608,16 @@ public class Gui_Graph extends JFrame{
 					g.drawString(e.getWeight()+"", midX, midY);
 
 					g.setColor(Color.YELLOW);
-
-					double m= (des.getLocation().y()-n.getLocation().y() )/  (des.getLocation().x()-n.getLocation().x() );
-					double xDirect;
-					if(n.getLocation().ix()>des.getLocation().ix()) {
-						xDirect=des.getLocation().x()+((des.getLocation().x()/2)/2/2/2/2);
-					}
-					else xDirect=des.getLocation().x()-((des.getLocation().x()/2)/2/2/2/2);
-					double yDirect=(des.getLocation().y()+(m*xDirect)-(m*des.getLocation().x()));
-					g.fillOval((int)xDirect,(int)yDirect+5, 10, 10);	
+					
+					double middlex=0,middley=0;
+						middlex=((des.getLocation().x()+n.getLocation().x())/2);
+						middley=((des.getLocation().y()+n.getLocation().y())/2);
+						
+						for (int i = 0; i < 2; i++) {
+							 middlex=((middlex+des.getLocation().x())/2);
+							 middley=((middley+des.getLocation().y())/2);
+						}		
+					g.fillOval((int)middlex-5,(int)middley-5, 10, 10);
 
 				}
 			}

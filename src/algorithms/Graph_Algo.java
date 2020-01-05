@@ -37,7 +37,7 @@ import dataStructure.node_data;
  */
 
 public class Graph_Algo implements graph_algorithms {
-//yishaygarme
+
 	private graph gr;
 
 	public Graph_Algo() {}
@@ -52,9 +52,6 @@ public class Graph_Algo implements graph_algorithms {
 
 	@Override
 	public void init(String file_name){
-//		gr  = null; 
-//		graph grG = new DGraph();
-
 		try
 		{    
 			FileInputStream file = new FileInputStream(file_name); 

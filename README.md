@@ -36,6 +36,7 @@ This class represents the set of graph-theory algorithms. Follows the Diaxtra al
 >Gui_Graph Class
 
 Example:
+![](images/graphimg1.jpg)
 
 
 This class represent a graphic interface of a graph. For drawing functions on graph we used JFRAM based on swing and awt Libraries. Operations that are applicable on it including:

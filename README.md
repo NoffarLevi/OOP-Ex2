@@ -4,6 +4,8 @@
 
 ### This project is an implementation of a directional weighted graph , mathematical algorithms and a graphic interface (GUI) of a graph
 
+Example:
+![](images/graphimg1.jpg)
 
 
 
@@ -34,8 +36,6 @@ This class represents a directional weighted graph. The class has a road-system 
 This class represents the set of graph-theory algorithms. Follows the Diaxtra algorithm
 
 >Gui_Graph Class
-
-Example:
 
 
 This class represent a graphic interface of a graph. For drawing functions on graph we used JFRAM based on swing and awt Libraries. Operations that are applicable on it including:

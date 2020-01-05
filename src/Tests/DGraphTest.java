@@ -15,10 +15,7 @@ class DGraphTest {
 
 	DGraph D;
 
-	@Test
-	void testDGraph() {
-		assertTrue(6==D.edgeSize());
-	}
+
 
 	@BeforeEach
 	void testDGraphInt() {
@@ -34,7 +31,11 @@ class DGraphTest {
 		D.connect(9, 3, 4);
 		D.connect(2, 9, 10);
 	}
-
+	
+	@Test
+	void testDGraph() {
+		assertTrue(10==D.edgeSize());
+	}
 	@Test
 	void testGetNode() {
 		int key=(int)(Math.random()*10);
@@ -62,14 +63,13 @@ class DGraphTest {
 
 	@Test
 	void testConnect() {
-		int src=(int)(Math.random()*10);
-		int dest=(int)(Math.random()*10);
-		D.connect(src, dest,13);
-		assertTrue(13==D.getEdge(src, dest).getWeight());
+		D.connect(0, 2, 20);
+		assertTrue(20==D.getEdge(0, 2).getWeight());
+		assertTrue(13==D.getEdge(4, 5).getWeight());
 		try {
 			D.connect(30,40,70);
 		}
-		catch(NullPointerException e) {
+		catch(RuntimeException e) {
 			System.out.println(e.getMessage());
 		}
 	}

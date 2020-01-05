@@ -512,8 +512,9 @@ public class Gui_Graph extends JFrame{
 		});
 		fd.setVisible(true);
 		String folder = fd.getDirectory();
-		String fileName = fd.getFile();
+		String fileName = fd.getFile();	
 		Galgo.save(folder+fileName);
+		
 	}
 
 	public void readFileDialog() {
@@ -534,6 +535,7 @@ public class Gui_Graph extends JFrame{
 
 		Galgo.init(folder+fileName);	  
 		this.g= Galgo.copy();
+		this.Galgo.init(this.g);
 		repaint();
 	}
 

@@ -75,6 +75,7 @@ public class DGraph implements graph, Serializable{
 			throw new RuntimeException("Can't add e vertex to itself");}
 		if(!(mapNode.containsKey(dest)))
 		{throw new RuntimeException("Dest does not exist");}
+		
 		if(this.getEdge(src, dest)!= null) {
 			mapEdge.get(src).remove(dest);	
 			numofEdges--;

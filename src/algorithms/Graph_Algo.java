@@ -37,13 +37,13 @@ import dataStructure.node_data;
  */
 
 public class Graph_Algo implements graph_algorithms {
-
+//yishaygarme
 	private graph gr;
 
 	public Graph_Algo() {}
 	
 	public Graph_Algo(graph g) {
-		init(g);
+		this.init(g);
 	}
 	@Override
 	public void init(graph g) {
@@ -52,15 +52,17 @@ public class Graph_Algo implements graph_algorithms {
 
 	@Override
 	public void init(String file_name){
-		gr  = null; 
+//		gr  = null; 
+//		graph grG = new DGraph();
 
 		try
 		{    
 			FileInputStream file = new FileInputStream(file_name); 
 			ObjectInputStream in = new ObjectInputStream(file); 
 
-			gr = (graph) in.readObject(); 
-
+			init((graph) in.readObject()); 
+			
+			
 			in.close(); 
 			file.close(); 
 
@@ -112,6 +114,7 @@ public class Graph_Algo implements graph_algorithms {
 					if(shortestPathDist(edge.getDest(),node.getKey() )==Double.POSITIVE_INFINITY){return false;}
 				}
 			}
+			else {return false;}
 		}
 		return true;
 	}
